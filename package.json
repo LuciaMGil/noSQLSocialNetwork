@@ -1,0 +1,24 @@
+{
+  "name": "nosqlsocialnetwork",
+  "version": "1.0.0",
+  "description": "Social Network API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuciaMGil/noSQLSocialNetwork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuciaMGil/noSQLSocialNetwork/issues"
+  },
+  "homepage": "https://github.com/LuciaMGil/noSQLSocialNetwork#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.4"
+  }
+}
