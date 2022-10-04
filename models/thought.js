@@ -14,6 +14,21 @@ const ThoughtSchema = new Schema(
 );
 
 
-const Thought = model('Thought', ThoughtSchema);
+const ReactionSchema = new Schema(
+    {
+    reactionId: {type: Schema.Types.ObjectId, default: () => new Types.ObjectId()},
+    responseBody: {type: String,  maxlength: 280,  required: true},
+    username: {type: String,require: true},
+    createdAt: {type: Date, default: Date.now, get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')}
+},
+{
+    toJSON: {
+        getters: true
+    }
+}
+);
 
+
+const Thought = model('Thought', ThoughtSchema);
+const Reaction = model('Reaction', ReactionSchema);
 module.exports = Thought; 
