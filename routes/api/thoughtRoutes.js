@@ -8,7 +8,7 @@ router.route('/thoughts').get(getThoughts).post(newThought)
 router.route('/thoughts/:id').get(getThoughtById).delete(deleteThought).put(updateThought)
 
 // POST AND DELETE A REACTION
-router.route('/thoughts/:thoughtId/reactions').post(newReaction).delete(deleteReaction)
+router.route('/thoughts/:thoughtId/reactions').post(newReaction)
 
 // DELETE A REACTION
 router.route('/thoughts/:thoughtId/reactions/:reactionId').delete(deleteReaction)
